@@ -44,16 +44,19 @@ A short description of what your project does and how it works. Feel free to inc
 
 An IO table listing all of your inputs and outputs and their function, like the one below:
 
-| Input/Output	| Description|																
-|-------------|--------------------------------------------------|
-| io_in[0]    | choose vga mode, when 0 640x480. When 1, 800x480 |
-| io_in[11:1] | unused                                           |
-| io_out[2:0] | Red channel                                      |
-| io_out[5:3] | Green channel                                    |
-| io_out[8:6] | Blue channel                                     |
-| io_out[9]   | HS, horizontal sync                              |
-| io_out[10]  | VS, vertical sync                                |
-| io_out[11]  | liveness check.  Toggles every couple of seconds |
+| Input/Output | Description|																
+|--------------|--------------------------------------------------|
+| io_in[0]     | right button signal                              |
+| io_in[1]     | left button signal                               |
+| io_in[2]     | down button signal                               |
+| io_in[3]     | up button signal                                 |
+| io_in[11:4]  | Unused                                           |
+| io_out[0]    | VS, vertical sync                                |
+| io_out[1]    | HS, horizontal sync                              |
+| io_out[3:2]  | Blue Channel                                     |
+| io_out[5:4]  | Green Channel                                    |
+| io_out[7:6]  | Red Channel                                      |
+| io_out[11:8] | Unused                                           |
 
 ## How to Test
 
