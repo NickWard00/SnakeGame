@@ -35,7 +35,7 @@
 
 This is a simple game of Snake that outputs to a display using the VGA interface. The game uses 5 buttons to control the game: left, right, up, down, and reset. The user must control the snake to reach an apple that appears randomly on the screen. Each time the snake eats an apple, it grows a longer tail. The snake moves continuously in one direction, and you can only change its direction (up, down, left, or right). The game ends when the snake collides with a wall or itself. To start the game, hit a direction button. To restart the game, hit the reset button.
 
-The development of the chip was completed using a fully open-source toolchain provided by the OSS CAD Suite. This included key tools such as Yosys for RTL synthesis, NextPNR for placement and routing, and OpenSTA for static timing analysis. Verilator was used for high-performance Verilog simulation, and the design verified using cocotb to create SystemVerilog testbenches with Python.
+The development of the chip was completed using a fully open-source toolchain provided by the OSS CAD Suite. This included key tools such as Yosys for RTL synthesis, NextPNR for placement and routing, and OpenSTA for static timing analysis. Verilator was used for high-performance Verilog simulation, and the design was verified using cocotb to create SystemVerilog testbenches in Python.
 
 ## User Configurables
 
