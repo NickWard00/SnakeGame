@@ -74,4 +74,4 @@ The following photo shows the CS-ULX3S-01 with the TinyVGA Pmod VGA adaptor.
 
 ## Demo
 Here is a video of the game working as intended on the ULX3S.
-
+https://github.com/NickWard00/SnakeGame/blob/0369b70b15940c62f082c47a60f1a965d06c6b3c/docs/GameDemoVideo.mp4
