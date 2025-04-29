@@ -1,9 +1,16 @@
 `ifndef define_svh
 `define define_svh
 
+// User Configurables
+// Comment/delete this to change the design to output 4 bit color
 `define TWO_BIT_COLOR
 
+// Uncomment the following to have walls not appear in the game. The snake will just loop across the screen.
 //`define NO_WALLS
+
+// Game Speed
+// Change to 3'd1 for fast, 3'd6 for slow, 3'd3 for normal
+`define DRAW_WAIT_CYCLES 3'd3
 
 // Game Direction
 `define LEFT_DIR 2'b00
@@ -41,9 +48,6 @@
 `define GRID_HEIGHT (`VGA_HEIGHT / `V_SQUARE)
 `define GRID_MID_HEIGHT (`GRID_HEIGHT / 2)
 `define MAX_V_ADDR (`GRID_HEIGHT - 1)
-
-// Change to 3'd1 for fast, 3'd6 for slow, 3'd3 for normal
-`define DRAW_WAIT_CYCLES 3'd3
 
 // Grid/Game Parameters
 `define X_SIZE [$clog2(`GRID_WIDTH):0]
