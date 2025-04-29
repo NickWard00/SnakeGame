@@ -3,7 +3,13 @@ project:
   source_files:
     - toplevel_chip.v
     - chip.sv
-    - decoder.v
+    - define.vh
+    - GameClock.sv
+    - GameStateController.sv
+    - KeyToDirection.sv
+    - LFSR.sv
+    - SnakeGame.sv
+    - VGAController.sv
   top_module:  "toplevel_chip"
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
@@ -16,10 +22,10 @@ documentation:
   author:       "Nick Ward"      # Your name
   discord:      ""      # Your discord handle
   title:        "Snake Game"      # Project title
-  description:  "PLACEHOLDER"      # Short description of what your project does
-  how_it_works: "PLACEHOLDER"      # Longer description of how the project works
-  how_to_test:  "PLACEHOLDER"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "PLACEHOLDER"      # Describe any external hardware needed
+  description:  "Simple VGA Game of Snake"      # Short description of what your project does
+  how_it_works: "The game uses 5 buttons to control the game. The goal is to eat an apple that appears randomly on the grid. Each time the snake eats food, it grows longer. You must avoid running into the walls, or into the snake's own body. The snake moves continuously in one direction, and you can only change its direction (up, down, left, or right). The game ends when the snake collides with a wall or itself. To start the game, hit a direction button. To restart the game, hit the reset button."      # Longer description of how the project works
+  how_to_test:  "To test the game, use the top_tb, vga_tb, LFSR_tb, and GameStateController_tb tests to test the functionality. In order to run, source into the OSS_CAD_SUITE and do: 'make -Bf top_tb.mk' for the top_tb tests. Change top_tb to any of the other tests to test functionality."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "This design assumes a TinyVGA Pmod VGA adaptor, which uses 2 bit color."      # Describe any external hardware needed
   language:     "SystemVerilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     25000000       # Clock frequency in Hz (if required)

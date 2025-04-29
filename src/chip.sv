@@ -1,5 +1,4 @@
 `default_nettype none
-`include SnakeGame.sv
 
 module my_chip (
   input logic [11:0] io_in, // Inputs to your chip

@@ -1,5 +1,5 @@
-`ifndef define_vh
-`define define_vh
+`ifndef define_svh
+`define define_svh
 
 `define TWO_BIT_COLOR
 
@@ -55,4 +55,4 @@
 `define TAIL_COUNT_MSB $clog2(`MAX_TAILS)
 `define TAIL_SIZE [`TAIL_COUNT_MSB:0]
 
-`endif // define_vh
+`endif // define_svh

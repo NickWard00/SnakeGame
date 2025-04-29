@@ -1,5 +1,5 @@
 `default_nettype none
-`include "define.vh"
+`include "define.svh"
 
 module VGAController (
   input logic i_clock, i_reset,

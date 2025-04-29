@@ -18,17 +18,14 @@
 
 2. For your final project, we will ask you to submit some sort of testbench to verify your design. Include all relevant testing files inside the `testbench` repository
 
-  
-  
+
 
 3. For your final project, we will ask you to submit documentation on how to run/test your design, as well as include your project proposal and progress reports. Include all these files inside the `docs` repository
 
-  
-  
+
 
 4. Optionally, if you use any images in your documentation (diagrams, waveforms, etc) please include them in a separate `img` repository
 
-  
 
 5. Feel free to edit this file and include some basic information about your project (short description, inputs and outputs, diagrams, how to run, etc). An outline is provided below
 
@@ -42,7 +39,7 @@ A short description of what your project does and how it works. Feel free to inc
 
 ## IO
 
-An IO table listing all of your inputs and outputs and their function, like the one below:
+Here is an IO table listing all of the inputs and outputs and their functions.
 
 | Input/Output | Description|																
 |--------------|--------------------------------------------------|

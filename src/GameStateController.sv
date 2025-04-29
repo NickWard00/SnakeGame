@@ -1,5 +1,5 @@
 `default_nettype none
-`include "define.vh"
+`include "define.svh"
 
 module GameStateController (
   input i_vga_clock, i_game_clock, i_reset,

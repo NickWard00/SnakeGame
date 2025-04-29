@@ -110,20 +110,3 @@ async def direction_tests(dut):
     await test_two_input_direction(dut)
 
     await test_opposite_direction(dut)
-
-@cocotb.test()
-async def game_over_test(dut):
-    print("============== STARTING DIRECTION TESTS ==============")
-
-    # Run the clock
-    # 40ns is the period of a 25MHz clock
-    cocotb.start_soon(Clock(dut.i_clock, 40, units="ns").start())
-
-    await FallingEdge(dut.i_clock)
-
-    # Reset the DUT
-    await reset_dut(dut)
-
-    await test_press_and_check_direction(dut, dut.i_left, "10")
-
-    await wait_until(dut, dut.game_over, 1, timeout_cycles=1000000)

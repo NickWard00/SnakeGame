@@ -1,10 +1,10 @@
 `default_nettype none
-`include "define.vh"
+`include "define.svh"
 // yosys -p 'read_verilog -sv define.vh GameStateController.sv LFSR.sv pll.sv SnakeGame.sv updateGameClock.sv VGA_Controller.sv; synth_ecp5 -json build/synthesis.json -top SnakeGame'
 // nextpnr-ecp5 --log build/nextpnr.log --json build/synthesis.json --write build/placed.json --freq 25 --sdf build/back_annotation.sdf --placed-svg build/place_render.svg --routed-svg build/routed_render.svg --12k --package CABGA381 --speed 6 --lpf constraints.lpf --textcfg build/pnr_out.config
 // ecppack --compress build/pnr_out.config build/bitstream.bit
 // fujprog build/bitstream.bit
-// Assumes i_clock assumes a 25MHz clock, please use a PLL incoming clock is different
+// Assumes i_clock assumes a 25MHz clock, please use a PLL if incoming clock is different
 
 module SnakeGame (
   input logic i_clock, i_reset,

@@ -2,3 +2,6 @@
 .idea
 .vscode
 *.vcd
+build/
+sim_build/
+__pycache__
