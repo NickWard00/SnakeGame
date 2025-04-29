@@ -29,13 +29,20 @@
 
 5. Feel free to edit this file and include some basic information about your project (short description, inputs and outputs, diagrams, how to run, etc). An outline is provided below
 
-# Final Project Example Template
+# Final Project
 
-This is an example outline you can modify and use in your final project submission. You are not required to use this exact template
+## Snake Game
 
-## Project Name
+This is a simple game of Snake that outputs to a display using the VGA interface. The game uses 5 buttons to control the game: left, right, up, down, and reset. The user must control the snake to reach an apple that appears randomly on the screen. Each time the snake eats an apple, it grows a longer tail. The snake moves continuously in one direction, and you can only change its direction (up, down, left, or right). The game ends when the snake collides with a wall or itself. To start the game, hit a direction button. To restart the game, hit the reset button.
 
-A short description of what your project does and how it works. Feel free to include images
+The development of the chip was completed using a fully open-source toolchain provided by the OSS CAD Suite. This included key tools such as Yosys for RTL synthesis, NextPNR for placement and routing, and OpenSTA for static timing analysis. Verilator was used for high-performance Verilog simulation, and the design verified using cocotb to create SystemVerilog testbenches with Python.
+
+## User Configurables
+
+In the `define.vh` file, the user can change a few parameters to change game functionality.
+1. `TWO_BIT_COLOR`: Comment/delete this to change the design to output 4 bit color
+2. `NO_WALLS`: Uncomment the following to have walls not appear in the game. The snake will just loop across the screen.
+2. `DRAW_WAIT_CYCLES`: Change this value to `3'd3` for normal speed, `3'd1` for fast speed, `3'd6` for slow speed. If the game is too challenging or too easy, feel free to change this option.
 
 ## IO
 
@@ -57,4 +64,12 @@ Here is an IO table listing all of the inputs and outputs and their functions.
 
 ## How to Test
 
-A short description of how to test the design post-tapeout
+To test the game, use the `top_tb`, `vga_tb`, `LFSR_tb`, and `GameStateController_tb` tests to test the functionality. 
+
+In order to run, source into the `OSS_CAD_SUITE` and do: `make -Bf top_tb.mk` for the top_tb tests. Change `top_tb` to any of the other tests to test functionality.
+
+## FPGA and Hardware Setup
+The following photo shows the CS-ULX3S-01 with the TinyVGA Pmod VGA adaptor.
+
+## Demo
+Here is a video of the game working as intended on the ULX3S.

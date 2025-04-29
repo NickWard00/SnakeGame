@@ -31,21 +31,17 @@ documentation:
   clock_hz:     25000000       # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - reset        | reset button (Active High)
+    - io_in[0]     | right button signal (Pulldown)
+    - io_in[1]     | left button signal (Pulldown)
+    - io_in[2]     | down button signal (Pulldown)
+    - io_in[3]     | up button signal (Pulldown)
+    - io_in[11:4]  | Unused
   outputs:
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - io_out[0]    | VS, vertical sync
+    - io_out[1]    | HS, horizontal sync
+    - io_out[3:2]  | Blue Channel
+    - io_out[5:4]  | Green Channel
+    - io_out[7:6]  | Red Channel
+    - io_out[11:8] | Unused
 
