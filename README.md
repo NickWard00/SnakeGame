@@ -74,5 +74,4 @@ The following photo shows the CS-ULX3S-01 with the TinyVGA Pmod VGA adaptor.
 
 ## Demo
 Here is a video of the game working as intended on the ULX3S.
-https://github.com/user-attachments/assets/7ab3045e-fc9c-4e10-81c9-ac02c61d2f4f
 
