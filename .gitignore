@@ -5,3 +5,4 @@
 build/
 sim_build/
 __pycache__
+results.xml
